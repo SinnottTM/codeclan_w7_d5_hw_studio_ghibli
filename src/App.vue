@@ -79,9 +79,9 @@ export default {
     this.selectedMovie = movie;
     })
 
+    // Only removes last movie on movie list but proves it works
     eventBus.$on('movie-removed', (movie) => {
-    this.selectedMovie = movie;
-    this.favouriteMoviesList.remove(this.selectedMovie)
+    this.favouriteMoviesList.pop(movie)
   })
  },
 
