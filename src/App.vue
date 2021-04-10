@@ -78,7 +78,12 @@ export default {
     // console.log("event triggered", movie)
     this.selectedMovie = movie;
     })
-  },
+
+    eventBus.$on('movie-removed', (movie) => {
+    this.selectedMovie = movie;
+    this.favouriteMoviesList.remove(this.selectedMovie)
+  })
+ },
 
 }
 
